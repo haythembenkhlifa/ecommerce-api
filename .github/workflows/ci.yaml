@@ -58,7 +58,7 @@ jobs:
         run: php artisan storage:link
 
       - name: Run Test suite
-        run: php artisan test --parallel
+        run: php artisan test
 
       - name: Install NPM dependencies
         run: npm install
