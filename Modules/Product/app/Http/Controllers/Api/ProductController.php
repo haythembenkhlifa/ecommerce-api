@@ -22,8 +22,6 @@ class ProductController extends Controller implements HasMiddleware
     use AuthorizesRequests;
 
 
-
-
     /**
      * Get the middleware that should be assigned to the controller.
      */
@@ -33,8 +31,9 @@ class ProductController extends Controller implements HasMiddleware
             new Middleware('auth:api', except: ['index', 'show']),
         ];
     }
-
-
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         return ProductResource::collection(
